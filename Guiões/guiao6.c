@@ -166,4 +166,11 @@ int ex5(){
 
         _exit(0);
     }
+
+    close(pp[0]);
+
+    while(wait(NULL)>0);
+
+    return 1;
 }
+

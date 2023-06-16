@@ -52,10 +52,10 @@ void conta(char* imagens[], int n){
     }
 
     wait(NULL);
+    close(pp[1]);
 
     if(fork()==0){
 
-        close(pp[1]);
         dup2(pp[0], STDIN_FILENO);
         close(pp[0]);
 
@@ -64,6 +64,7 @@ void conta(char* imagens[], int n){
         _exit(-1);
     }
 
+    close(pp[0]);
     int status;
 
     wait(&status); // Espera pelo término do segundo filho
