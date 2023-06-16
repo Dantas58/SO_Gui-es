@@ -1,2 +1,2 @@
-# SO_Gui-es
+# SO_Guioes
 Guiões e Testes de Sistemas Operativos
