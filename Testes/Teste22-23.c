@@ -67,7 +67,7 @@ void conta(char* imagens[], int n){
     close(pp[0]);
     int status;
 
-    wait(&status); // Espera pelo término do segundo filho
+    wait(&status); 
     if (!WIFEXITED(status)) perror("A operação não foi bem sucedida");
     if (WEXITSTATUS(status) == -1) perror("A operação não foi bem sucedida");
 }
