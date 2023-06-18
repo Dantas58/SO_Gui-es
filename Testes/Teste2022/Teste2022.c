@@ -29,7 +29,7 @@ int mensagens(char* palavra, char* ficheiro){
     }
 
     close(pp[1]);
-    wait(NULL);
+    //wait(NULL); não precisa de esperar, o read vai ficar bloqueado ate algo ser escrito no pipe
 
     int pipe2[2];
     if(pipe(pipe2)<0){
